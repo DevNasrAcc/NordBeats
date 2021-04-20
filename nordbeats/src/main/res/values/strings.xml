@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright (C) 2014 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+
+    <string name="app_name">NordBeats</string>
+    <string name="favorite">Favorite</string>
+    <string name="error_no_metadata">Unable to retrieve metadata.</string>
+    <string name="browse_genres">Listed Songs</string>
+    <string name="browse_genre_subtitle">All songs by genre</string>
+    <string name="browse_musics_by_genre_subtitle">%1$s songs</string>
+    <string name="random_queue_title">Random music</string>
+    <string name="error_no_connection">Cannot connect to server. Please, check your Internet connectivity.</string>
+    <string name="error_loading_media">Error Loading Media</string>
+    <string name="casting_to_device">Casting to %1$s</string>
+    <string name="currently_playing_song">Song currently playing</string>
+    <string name="currently_playing_artist">Artist of currently playing song</string>
+    <string name="currently_playing_extra_info">Extra info for currently playing song</string>
+    <string name="play_item">Play item</string>
+    <string name="play_pause">play or pause</string>
+    <string name="skip_next">skip to next</string>
+    <string name="skip_prev">skip to previous</string>
+    <string name="touch_to_cast">Touch to connect to a Google Cast device</string>
+    <!-- Use the default receiver. To customize a styled media receiver, you can use
+         the css and images under <project-root>/docs/cast_styled_receiver -->
+    <string name="cast_application_id">CC1AD845</string>
+    <string name="home_title">Home</string>
+    <string name="related_content_header">You may also like</string>
+    <string name="action_listen">Listen</string>
+    <string name="open_content_drawer">Open the main menu</string>
+    <string name="close_content_drawer">Close the main menu</string>
+    <string name="placeholder_message">This is a placeholder for your application code.</string>
+    <string name="drawer_allmusic_title">All Music</string>
+    <string name="drawer_playlists_title">Playlists</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="background_image_str">Background image for album art</string>
+    <string name="search_queue_title">Search results</string>
+    <string name="no_search_results">No search results.</string>
+    <string name="loading">Loading…</string>
+    <string name="media_route_menu_title">Play on…</string>
+    <string name="nav_header_username">Muhammad Adeel</string>
+
+    <string name="drawer_clubs_title">Clubs</string>
+    <string name="drawer_live_clubs_title">Live parties</string>
+    <string name="drawer_clubs_map_title">Nearby clubs</string>
+    <string name="drawer_invite_friends_title">Invite friends</string>
+
+    <!-- Notificaiton Channel -->
+    <string name="notification_channel">UAMP_Channel_ID</string>
+    <string name="notification_channel_description">Channel ID for UAMP</string>
+
+    <string name="abc_an_amazing_alphabet_book">The Club Tube</string>
+    <string name="are_you_my_mother">Club Koyota</string>
+    <string name="where_is_babys_belly_button">Schmicki Club</string>
+    <string name="on_the_night_you_were_born">Lounge Anaconda</string>
+    <string name="hand_hand_fingers_thumb">Hof Stone</string>
+    <string name="the_very_hungry_caterpillar">Disco Diamond</string>
+    <string name="the_going_to_bed_book">Club Night</string>
+    <string name="oh_baby_go_baby">Club Studio</string>
+    <string name="the_tooth_book">Mayoor Studio</string>
+    <string name="one_fish_two_fish_red_fish_blue_fish">Die Duisburg Afera</string>
+
+    <string name="dr_seuss">Dj. Knight</string>
+    <string name="karen_katz">Dj. Katzyka</string>
+    <string name="nancy_tillman">Dj. Nancy</string>
+    <string name="eric_carle">Dj. Carle</string>
+    <string name="sandra_boynton">Dj. Boynton</string>
+
+    <string name="club_name">Die Beuna Muka</string>
+
+    <string name="club_address_01">Henkelstraße 67, 40589 Düsseldorf, Germany</string>
+    <string name="club_address_02">Europa-Allee 50, 60327 Frankfurt am Main, Germany</string>
+    <string name="club_address_03">Hohenzollernring 56, 48145 Münster, Germany</string>
+    <string name="club_address_04">Vogelsanger Weg 80, 40470 Düsseldorf, Germany</string>
+    <string name="club_address_05">Dernburgstr. 50, 14057 Berlin, Germany</string>
+    <string name="club_address_06">Bonner Talweg 100, D-53113 Bonn, Germany</string>
+    <string name="club_address_07">Nauheimer Str. 100, 70372 Stuttgart, Germany</string>
+    <string name="club_address_08">Heinrich-Heine-Allee, 40213 Düsseldorf, Germany</string>
+
+    <string name="club_timing_01">Timings: 10:00 &#8211; 23:00</string>
+    <string name="club_timing_02">Timings: 21:00 &#8211; 05:00</string>
+    <string name="club_timing_03">Timings: 20:30 &#8211; 03:00</string>
+    <string name="club_timing_04">Timings: 08:00 &#8211; 03:30</string>
+    <string name="club_timing_05">Timings: 17:00 &#8211; 05:30</string>
+    <string name="club_timing_06">Timings: 19:30 &#8211; 02:00</string>
+    <string name="club_timing_07">Timings: 18:00 &#8211; 00:00</string>
+    <string name="club_timing_08">Timings: 22:00 &#8211; 06:00</string>
+
+    <string name="club_01">1</string>
+    <string name="club_02">2</string>
+    <string name="club_03">3</string>
+    <string name="club_04">4</string>
+    <string name="club_05">5</string>
+    <string name="club_06">6</string>
+    <string name="club_07">7</string>
+    <string name="club_08">8</string>
+
+    <string name="upload_file">Upload File</string>
+
+    <string name="server_name">nordbeats.000webhost</string>
+    <string name="server_password">mwc2elrYhngCOq8r1N42</string>
+    <string name="database_username">id4456552_adeel_nordbeats</string>
+    <string name="database_name">nordbeats_database</string>
+
+    <string name="infinity_hosting_account_name">nordbeats.epizy.com</string>
+    <string name="infinity_hosting_account_password">7DMVzeqpJWuZ</string>
+
+    <string name="google_api_key">AIzaSyBhdJmRnjQ1GmahclDH_oyivJ-VSZNjQ0U</string>
+    <string name="title_activity_club_maps">Clubs Map</string>
+
+    <string name="style_json">
+        [
+            {
+                \"featureType\": \"poi.business\",
+                \"elementType\": \"all\",
+                \"stylers\": [
+                    {
+                        \"visibility\": \"off\"
+                    }
+                ]
+            },
+            {
+                \"featureType\": \"transit\",
+                \"elementType\": \"labels.icon\",
+                \"stylers\": [
+                    {
+                        \"visibility\": \"off\"
+                    }
+                ]
+            }
+        ]
+    </string>
+</resources>

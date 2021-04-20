@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2018 NordBeats Music Application By Muhammad Adeel
+ *
+ *******************************************************************************
+ * AUTHORS:
+ *******************************************************************************
+ * Muhammad Adeel       <muhammad_adeel91@yahoo.com>
+ * Syed Muhammad Razi
+ * Danyal Akhtar
+ *
+ * Permission is only granted for the university and feel free to distribute
+ * the copy of the original version to others with the limitation of not
+ * selling or copying the code without adding their own copyright on the top
+ * of the original copyright content. It also contains the code of "The Android
+ * Open Source Project" under the Apache License, you can find the Apache
+ * License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * The Software is provided "as is", without warranty of any kind, express or
+ * implied, including but not limited to the warranties of merchantability,
+ * fitness for a particular purpose and noninfringement. In no event shall the
+ * authors or copyright holders b liable for any claim, damages or other
+ * liability, whether in an action of contract, tort or otherwise, arising from,
+ * out of or in connection with the software or the use or other dealings in
+ * the software.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.adeel.nordbeats.music"
+    tools:ignore="MissingLeanbackLauncher">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <!--
+    Set android.software.leanback to false, so the APK will be available to both
+    TV and regular devices.
+    -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:banner="@drawable/banner_tv"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/UAmpAppTheme">
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- SPlash activity -->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main activity for music browsing on phone -->
+        <activity
+            android:name=".ui.MusicPlayerActivity"
+            android:label="@string/app_name">
+
+            <!-- Use this intent filter to get voice searches, like "Play The Beatles" -->
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Placeholder activity for phone UI -->
+        <activity
+            android:name=".ui.PlaceholderActivity"
+            android:label="@string/app_name" />
+
+        <!-- Clubs activity for phone UI -->
+        <activity
+            android:name=".ui.ClubsActivity"
+            android:label="Clubs" />
+
+        <!-- Live Clubs activity for phone UI -->
+        <activity
+            android:name=".ui.LiveClubsActivity"
+            android:label="Live parties" />
+
+        <!-- Club Songs activity for phone UI -->
+        <activity
+            android:name=".ui.ClubSongsActivity"
+            android:label="Club Songs" />
+
+        <!--
+        Proxy activity that opens either the NowPlaying TV or the mobile UI, depending on
+        the current environment
+        -->
+        <activity
+            android:name=".ui.NowPlayingActivity"
+            android:icon="@drawable/ic_launcher" />
+
+        <!--
+             (OPTIONAL) use this meta data to indicate which icon should be
+             used in Android Auto media notifications (for example, when the
+             music changes and the user is looking at another app)
+        -->
+        <meta-data
+            android:name="com.google.android.gms.car.notification.SmallIcon"
+            android:resource="@drawable/ic_notification" />
+
+        <!--
+             (OPTIONAL) use this meta data to override the theme from which Android Auto will
+             look for colors. If you don't set this, Android Auto will look
+             for color attributes in your application theme.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.car.application.theme"
+            android:resource="@style/CarTheme" />
+
+        <!--
+         Main music service, provides media browsing and media playback services to
+         consumers through MediaBrowserService and MediaSession. Consumers connect to it through
+         MediaBrowser (for browsing) and MediaController (for play session control)
+        -->
+        <service
+            android:name=".MusicService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_key" />
+
+        <!-- (REQUIRED) use this meta data to to declare the app OptionsProvider. -->
+        <meta-data
+            android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
+            android:value="com.adeel.nordbeats.music.CastOptionsProvider" />
+
+        <!--
+             A full screen activity showing controls and a seek bar for
+             the current playing music
+        -->
+        <activity
+            android:name=".ui.FullScreenPlayerActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.MusicPlayerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adeel.nordbeats.music.ui.MusicPlayerActivity" />
+        </activity>
+
+        <!--
+             A receiver that will receive media buttons and send as
+            intents to your MediaBrowserServiceCompat implementation.
+            Required on pre-Lollipop. More information at
+            http://developer.android.com/reference/android/support/v4/media/session/MediaButtonReceiver.html
+        -->
+        <receiver android:name="android.support.v4.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.ClubMapsActivity"
+            android:label="@string/title_activity_club_maps" />
+
+        <service
+            android:name=".GpsTrackerService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

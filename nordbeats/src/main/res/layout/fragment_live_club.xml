@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemmainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <ImageView
+        android:id="@+id/item_picture"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/club_04" />
+
+    <RelativeLayout
+        android:id="@+id/itemdetailslayout"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/splash_background_alpha">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/item_logo"
+                android:layout_width="750dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/club_logo_01" />
+
+            <TextView
+                android:id="@+id/item_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_logo"
+                android:gravity="center_horizontal"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="1dp" />
+
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_logo"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/club_name"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="bottom">
+
+            <ImageView
+                android:id="@+id/itemdetailslocateicon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/iconlocation" />
+
+            <TextView
+                android:id="@+id/item_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_toEndOf="@+id/itemdetailslocateicon"
+                android:layout_toRightOf="@+id/itemdetailslocateicon"
+                android:text="@string/club_address_01"
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
+
+            <ImageView
+                android:id="@+id/itemdetailspickupicon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_below="@+id/item_address"
+                android:layout_margin="5dp"
+                android:src="@drawable/iconpickup" />
+
+            <TextView
+                android:id="@+id/item_timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_address"
+                android:layout_marginTop="6dp"
+                android:layout_toEndOf="@+id/itemdetailspickupicon"
+                android:layout_toRightOf="@+id/itemdetailspickupicon"
+                android:text="Timings: 20:30 - 04:00"
+                android:textColor="@android:color/white"
+                android:textSize="13dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
